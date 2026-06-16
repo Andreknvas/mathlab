@@ -1,0 +1,11 @@
+services:
+  mathlab:
+    build: .
+    container_name: mathlab
+    ports:
+      - "8888:8888"      # JupyterLab acessível em localhost:8888
+    volumes:
+      - ./notebooks:/workspace/notebooks   # seus notebooks ficam salvos na máquina host
+    environment:
+      - PYTHONPATH=/workspace
+    restart: unless-stopped               # reinicia automaticamente se o Docker reiniciar
