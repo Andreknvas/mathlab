@@ -18,3 +18,6 @@ pandas>=2.1
 
 # Extra útil: progress bars em loops
 tqdm
+
+#Plota 3d com movimento
+ipympl>=0.9
